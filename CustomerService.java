@@ -1,6 +1,7 @@
 package com.service;
 
 import com.entity.Customer;
+//import com.entity.CustomerNotFoundException;
 
 import java.util.List;
 
@@ -8,7 +9,11 @@ public interface CustomerService {
 
     public String addCustomer();
 
-    public String deleteCustomer();
+    //String deleteCustomer(String id);
+
+    public String deleteCustomer(Customer customer);
+
+    String deleteCustomer(String id);
 
     public String updateCustomer();
 

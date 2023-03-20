@@ -1,18 +1,37 @@
 package com.entity;
 
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "Customer")
+
 public class Customer {
 
+    @Column
     public int id;
 
+    @Column
     public int age;
 
+    @Column
     public String name;
 
+    @Column
     private String email;
 
-    private String username;
+    @Column private String username;
 
+    @Column
     private String password;
+    @Column
+    private int addCustomer;
+    @Column
+    private int updateCustomer;
+    @Column
+    private int deleteCustomer;
 
     public Customer() {
     }
@@ -65,5 +84,15 @@ public class Customer {
 
     public void setPassword() {
         this.password = password;
+    }
+
+    public String addCustomer(Customer customer) {
+        this.addCustomer = addCustomer;
+        return addCustomer(customer);
+    }
+
+    public String updateCustomer(Customer customer) {
+        this.updateCustomer = updateCustomer;
+        return updateCustomer(customer);
     }
 }
