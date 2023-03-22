@@ -4,6 +4,10 @@ package com.entity;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
+import jakarta.persistence.metamodel.SingularAttribute;
+import org.springframework.data.jpa.domain.AbstractPersistable;
+
+import java.io.Serializable;
 
 @Entity
 @Table(name = "Customer")
@@ -94,5 +98,11 @@ public class Customer {
     public String updateCustomer(Customer customer) {
         this.updateCustomer = updateCustomer;
         return updateCustomer(customer);
+    }
+
+
+    public String deleteCustomer(Customer customer) {
+        //this.deleteCustomer = deleteCustomer(deleteCustomer);
+        return deleteCustomer(customer);
     }
 }
